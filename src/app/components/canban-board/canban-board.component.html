@@ -1,0 +1,11 @@
+
+<div class="canban-board min-vh-100">
+  <div class="container">
+    <div class="row">
+      <app-tasks-lane [tasks]="tasks$ | async" [status]="TaskStatus.toDo" class="col-sm-3"></app-tasks-lane>
+      <app-tasks-lane [tasks]="inProgressTasks" [status]="TaskStatus.inProgress" class="col-sm-3"></app-tasks-lane>
+      <app-tasks-lane [tasks]="[]" [status]="TaskStatus.awaitingReview" class="col-sm-3"></app-tasks-lane>
+      <app-tasks-lane [tasks]="[]" [status]="TaskStatus.done" class="col-sm-3"></app-tasks-lane>
+    </div>
+  </div>
+</div>

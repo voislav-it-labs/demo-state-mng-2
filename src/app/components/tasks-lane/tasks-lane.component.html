@@ -1,0 +1,9 @@
+
+<div [ngClass]="statusClasses" class="h-100" class="lane">
+  <div class="p-2">
+    <div>
+      {{title}}
+    </div>
+    <app-task-card *ngFor="let task of tasks" [task]="task"></app-task-card>
+  </div>
+</div>
